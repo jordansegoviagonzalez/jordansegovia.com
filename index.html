@@ -12,7 +12,7 @@
 <body>
   <!-- Background video (replace hero.mp4) -->
   <video class="bg-video" autoplay muted loop playsinline poster="assets/img/poster.jpg" aria-hidden="true">
-    <source src="assets/video/hero.mp4" type="video/mp4">
+    <source src="assets/video/hero7.mp4" type="video/mp4">
   </video>
 
   <!-- Decorative spheres -->
@@ -51,16 +51,13 @@
         </div>
 
         <div class="hero-actions">
-          <!-- Contact (scrolls to #contact) -->
-          <a class="pill pill--contact" href="#contact" aria-label="Contact">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 2v.2l9 5.3 9-5.3V7H3zM3 9.8V17h18V9.8l-9 5.2-9-5.2z"/>
-            </svg>
-            Contact
-          </a>
-
-          <!-- LinkedIn -->
-          <a class="pill" href="https://www.linkedin.com/in/jordansegovia" target="_blank" rel="noopener" aria-label="LinkedIn">
+         
+          <!-- LinkedIn (primary) -->
+          <a class="pill pill--contact"
+             href="https://www.linkedin.com/in/jordansegovia"
+             target="_blank"
+             rel="noopener"
+             aria-label="LinkedIn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M4.98 3.5c0 1.38-1.12 2.5-2.48 2.5S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8.98h5V24H0V8.98zM8.98 8.98h4.79v2.05h.07c.67-1.27 2.3-2.61 4.73-2.61 5.06 0 6 3.33 6 7.66V24h-5v-6.73c0-1.61-.03-3.69-2.25-3.69-2.26 0-2.61 1.77-2.61 3.58V24h-5V8.98z"/>
             </svg>
@@ -68,21 +65,44 @@
           </a>
 
           <!-- GitHub -->
-          <a class="pill" href="https://github.com/jordansegoviagonzalez" target="_blank" rel="noopener" aria-label="GitHub">
+          <a class="pill"
+             href="https://github.com/jordansegoviagonzalez"
+             target="_blank"
+             rel="noopener"
+             aria-label="GitHub">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.85 3.15 8.96 7.51 10.41.55.1.75-.24.75-.54 0-.27-.01-.98-.02-1.93-3.06.66-3.71-1.48-3.71-1.48-.5-1.29-1.23-1.63-1.23-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.69 2.6 1.2 3.23.92.1-.72.39-1.2.7-1.47-2.44-.28-5-1.22-5-5.43 0-1.2.43-2.18 1.14-2.95-.11-.28-.5-1.42.11-2.96 0 0 .95-.3 3.11 1.13.9-.25 1.86-.38 2.82-.39.96.01 1.92.14 2.82.39 2.16-1.43 3.11-1.13 3.11-1.13.61 1.54.22 2.68.11 2.96.71.77 1.14 1.75 1.14 2.95 0 4.22-2.56 5.15-5 5.43.4.34.75 1.02.75 2.05 0 1.48-.02 2.68-.02 3.05 0 .3.2.65.76.54 4.35-1.45 7.5-5.56 7.5-10.41C23.02 5.24 18.27.5 12 .5z"/>
             </svg>
             GitHub
           </a>
 
-          <!-- Codewars -->
-          <a class="pill" href="https://www.codewars.com/users/jordansegoviagonzalez%20" target="_blank" rel="noopener" aria-label="Codewars">
+          <!-- Hugging Face -->
+          <a class="pill"
+             href="https://huggingface.co/jordansegovia"
+             target="_blank"
+             rel="noopener"
+             aria-label="Hugging Face">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <!-- simple hex/knot mark -->
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="9" cy="10" r="1.2" fill="black"></circle>
+              <circle cx="15" cy="10" r="1.2" fill="black"></circle>
+              <path d="M8 14c1 1.5 2.5 2.3 4 2.3s3-0.8 4-2.3" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            Hugging Face
+          </a>
+
+          <!-- Codewars -->
+          <a class="pill"
+             href="https://www.codewars.com/users/jordansegoviagonzalez%20"
+             target="_blank"
+             rel="noopener"
+             aria-label="Codewars">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">  
               <path d="M12 2l8.66 5v10L12 22 3.34 17V7L12 2zm0 2.2L5.84 7.5v9l6.16 3.3 6.16-3.3v-9L12 4.2zM9.8 9.2l2.2 1.27 2.2-1.27v2.53l-2.2 1.27-2.2-1.27V9.2z"/>
             </svg>
             Codewars
           </a>
+          
         </div>
       </div>
     </div>
@@ -103,9 +123,14 @@
                 <li>Harvard - Bachelor of Liberal Arts in Extension Studies, Field of Study: Computer Science in progress </li>
             </ul>
             <div class="cta-row">
-                <a class="btn" href="#projects">See projects</a>
-                <a class="btn ghost" href="https://drive.google.com/file/d/1t4-j-NoHxSMEh4ccck44f1tkaS72NXeG/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
-            </div>
+              <a class="btn" href="#contact">Contact</a>
+              <a class="btn ghost"
+              href="assets/docs/Jordan%20Segovia_Resume_SWE.pdf"
+              download="Jordan Segovia - Resume.pdf"
+              rel="noopener">
+              Download CV
+            </a>
+          </div>
         </div>
         
     </section>
@@ -152,6 +177,42 @@
             </div>
         </article>
 
+
+<!-- vizor-pharmacy-vision -->
+<article class="card">
+  <h3>Vizor – Pharmacy Verification Computer Vision for Robotics</h3>
+
+  <!-- Screenshot or cover image goes here -->
+  <img src="assets/img/ Vizor – Pharmacy Verification Computer Vision System.png"
+       alt="Vizor Pharmacy Verification System project cover"
+       loading="lazy"
+       decoding="async"
+       style="max-width: 100%; border-radius: 12px; margin: 14px 0; box-shadow: 0 6px 24px rgba(0,0,0,0.24);" />
+
+  <p>
+    Vizor is an enterprise grade computer vision and sensor fusion platform for automated pharmacy verification in robotics and medical technology.
+    The system uses a ConvNeXt Deep learning model together with sensor data to verify medication trays, labels, and doses, achieving accuracy with over 99% accuracy
+    and latency under 100 milliseconds on GPU and Apple MPS.
+    Vizor includes a FastAPI inference service, robust safety logic with fail closed behavior,
+    a reproducible evaluation pipeline, and a design that is ready for production with a complete model card and dataset management.
+  </p>
+
+  <div class="meta">
+    <!-- Optional tech tags -->
+    <!-- <span class="tag">Python</span> <span class="tag">ConvNeXt</span> <span class="tag">Sensor Fusion</span> <span class="tag">FastAPI</span> <span class="tag">PyTorch</span> -->
+  </div>
+
+  <div class="actions">
+    <a class="btn ghost"
+       href="https://huggingface.co/jordansegovia/vizor-pharmacy-vision"
+       target="_blank" rel="noopener">Hugging Face Model Repo</a>
+
+    <a class="btn"
+       href="https://github.com/jordansegoviagonzalez/vizor-pharmacy-vision"
+       target="_blank" rel="noopener">GitHub Repo</a>
+  </div>
+</article>
+
 <!-- sophia-ai -->
 <article class="card">
   <h3>Sophia AI - A Standalone Local LLM for Technical Interview Coaching (100% Offline, No Cloud Calls)</h3>
@@ -161,7 +222,7 @@
        alt="Sophia AI project cover"
        loading="lazy"
        decoding="async"
-       style="max-width: 96%; border-radius: 12px; margin: 14px 0; box-shadow: 0 6px 24px rgba(0,0,0,0.24);" />
+       style="max-width: 100%; border-radius: 12px; margin: 14px 0; box-shadow: 0 6px 24px rgba(0,0,0,0.24);" />
 
   <p>
     Sophia AI is a domain specific, fine tuned Large Language Model designed to act as an expert technical interviewer
@@ -220,7 +281,7 @@
 
 <!-- Modular Reasoning Engine -->
 <article class="card">
-  <h3>Offline Modular Reasoning Engine: Testing the Miah LLM</h3>
+  <h3>Offline Modular Reasoning Engine: Testing Miah LLM</h3>
 
   <!-- Clickable thumbnail -> opens demo video -->
   <a href="YOUR_VIDEO_DEMO_LINK" target="_blank" rel="noopener">
@@ -234,9 +295,9 @@
 
   <p>
     Client agnostic LLM reasoning service with server streaming gRPC,
-    hot swappable model adapters (OpenAI, DeepSeek,Grok AI, Azure APIs and a local model of AI Miah(LLM)
-    via ONNX Runtime and TensorRT-LLM), and SQLite (WAL) session memory.
-    Ships with health/readiness endpoints, structured logging, unit tests, and a Python client.
+    hot swappable model adapters (OpenAI, DeepSeek, Grok, Azure APIs and a local model of AI Miah(LLM)
+    via ONNX Runtime and TensorRT for LLMs), and SQLite session memory.
+    Ships with health and readiness endpoints, structured logging, unit tests, and a Python client.
   </p>
 
   <div class="meta"></div>
@@ -255,6 +316,10 @@
 <!-- EXPERIENCE (Side-by-Side: Education | Professional) -->
 <section id="experience" class="section" aria-labelledby="experience-title">
   <h2 id="experience-title">Experience</h2>
+  <p class="xp-summary">
+    About 4 years of hands on experience working with software and coding: 2 recent years focused on Artificial Intelligence
+    and Full Stack Software Engineering, plus2 earlier years in high school programming classes.
+  </p>
 
   <div class="xp-split">
     <!-- center line -->
@@ -295,47 +360,60 @@
         </li>
 
         <li class="xp-item">
-          <div class="xp-role">Cuesta College — General Education</div>
+          <div class="xp-role">Cuesta College — General Education(Math)</div>
           <div class="xp-org">Cuesta College</div>
           <div class="xp-date">2013–2015</div>
         </li>
       </ul>
     </div>
 
-    <!-- RIGHT: Professional Experience -->
-    <div class="xp-col xp-pro">
-      <h3 class="xp-col-title">Professional Experience</h3>
-      <ul class="xp-timeline">
-        <li class="xp-item">
-          <div class="xp-role">AI Art Studio — <strong>1st Place</strong>, Harvard SEAS LLM Hackathon</div>
-          <div class="xp-org">Competitive, judged event (SEAS &amp; Venture Miner)</div>
-          <div class="xp-date">Oct 2025</div>
-          <p class="xp-note">
-            Delivered AI Art Studio: converts a single prompt into short cinematic output (images + video), a narrated script,
-            and synchronized sound. Orchestrates four task-specific models (visual, narrative, audio, QA/auditor) with performance
-            optimizations and methods grounded in 70+ research papers—enabling creators, educators, and filmmakers to prototype scenes in seconds.
-          </p>
-        </li>
+<!-- RIGHT: Professional Experience -->
+<div class="xp-col xp-pro">
+  <h3 class="xp-col-title">Professional Experience</h3>
+  <ul class="xp-timeline">
 
-        <li class="xp-item">
-          <div class="xp-role">AI/ML Engineer</div>
-          <div class="xp-org">Bright Minds Private AI</div>
-          <div class="xp-date">2024–Present</div>
-          <p class="xp-note">
-            Shipped private LLM pipelines using C++, gRPC, EF Core, and MySQL. Delivered the Modular Reasoning Engine
-            (server-streaming gRPC, hot-swappable adapters).
-          </p>
-        </li>
+    <li class="xp-item">
+      <div class="xp-role">Machine Learning Engineer — AI Art Studio (1st Place)</div>
+      <div class="xp-org">Harvard SEAS LLM Hackathon, project collected by Meta</div>
+      <div class="xp-date">Oct 2025</div>
+      <p class="xp-note">
+        Led a team of four to build AI Art Studio, a prompt to cinematic video pipeline that turns a single input
+        into visuals, a narrated script, and synchronized audio with support for re editing. Trained and integrated
+        a “cinematic director” quality assurance model in Python using scikit learn, TensorFlow, and PyTorch to
+        orchestrate multiple models and enforce consistency, and shipped a live demo in a three hour build window.
+      </p>
+    </li>
 
-        <li class="xp-item">
-          <div class="xp-role">Full-Stack Software Engineer</div>
-          <div class="xp-org">TrueCoders</div>
-          <div class="xp-date">2024–2025</div>
-          <p class="xp-note">1000+ hours project-based .NET: ASP.NET Core MVC, EF Core, MySQL; delivered capstone applications.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
+    <li class="xp-item">
+      <div class="xp-role">AI and Machine Learning Engineer</div>
+      <div class="xp-org">Bright Minds Private AI</div>
+      <div class="xp-date">2024–Present</div>
+      <p class="xp-note">
+        Design and build standalone large language models and private AI systems that run fully offline and on premises.
+        Own the full path from data preparation and fine tuning through evaluation and deployment, including modular
+        reasoning engines and high performance inference services built with C sharp, Python, gRPC, and relational databases.
+        Use Microsoft Azure and Amazon Web Services for experimentation, data workflows, and cloud baselines while keeping
+        the primary systems designed to operate without external dependencies. Focus on clean architecture, observability,
+        and deployment patterns that are ready for enterprise environments.
+      </p>
+    </li>
+
+    <li class="xp-item">
+      <div class="xp-role">Software Engineer | Applied AI</div>
+      <div class="xp-org">TrueCoders — Full Stack Software Engineering</div>
+      <div class="xp-date">Sept 2024–Nov 2025</div>
+      <p class="xp-note">
+        Built MiahAI, an offline private learning assistant: an ASP.NET Core MVC chat application with persistent
+        session memory, CRUD workflows, and a streaming style interface. Implemented layered architecture across
+        web, core, and infrastructure projects with dependency injection, validation, and exception handling,
+        backed by Entity Framework Core and MySQL migrations. Integrated a typed gRPC and Protobuf boundary to a
+        local modular reasoning engine for low latency model calls and stable contracts.
+      </p>
+    </li>
+
+  </ul>
+</div>
+</div>
 </section>
 
 
