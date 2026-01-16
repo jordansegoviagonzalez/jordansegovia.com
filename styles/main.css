@@ -55,7 +55,7 @@ html{scroll-behavior:smooth}
 .nav a{color:var(--muted)}
 
 /* ===== Main glass container ===== */
-main.glass{max-width:1280px;margin:96px auto 40px auto;padding:16px}
+main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
 
 /* Sections are also glass inside the main (stacked panes for depth) */
 .section{
