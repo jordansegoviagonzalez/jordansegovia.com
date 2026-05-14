@@ -21,7 +21,12 @@
 <!-- Navigation -->
 <nav class="nav">
     <div class="brand">jordansegovia.com</div>
-    <ul>
+    <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul id="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -119,12 +124,13 @@
           hardware and team collaboration.
             </p>
               <p class="xp-summary">
-          Experience: 4+ years of dedicated development, including 2 years specialized in AI, ML and Full Stack Software Engineering. 
-          Foundation in programming since 2009.
+          Experience: 5+ years building enterprise software, including production work
+          across AI/ML systems, backend engineering, and full-stack software
+          development. Early programming foundation since 2009.
             </p>
             <ul class="awards">
                 <li>1st Place - Harvard SEAS LLM Hackathon (AI Art Studio, 2025)</li>
-                <li>Harvard - Bachelor of Liberal Arts in Extension Studies, Field of Study: Computer Science in progress </li>
+                <li>Harvard - Bachelor of Liberal Arts in Extension Studies, Field of Study: Computer Science, expected 2028</li>
             </ul>
             <div class="cta-row">
               <a class="btn" href="#contact">Contact</a>
@@ -151,23 +157,23 @@
                 <span class="badge"> 🏆 1st Place — Harvard SEAS LLM Hackathon</span>
             </h3>
 
-            <img
+            <img class="project-media project-media--full"
                     src="assets/img/triphony-demo1.gif"
                     alt="AI Art Studio — prompt to short cinematic clip"
-                    class="project-image"
                     loading="lazy"
+                    decoding="async"
             />
 
 
-            <p>
-                Award Winning AI Art Studio converts a single prompt into a short cinematic clip.
-                Generated images and video, a narrated script, and synchronized sound. 
-                It opens new worlds for content creators, storytellers, educators, 
-                and filmmakers, who can prototype scenes and emotions in seconds. 
-                The system orchestrates four task specific models (visual, narrative, 
-                audio, and a QA auditor), applies accelerated performance, 
-                methods grounded in 70+ of AI research.
-            </p>
+            <p><strong>Outcome:</strong> Award Winning AI Art Studio converts a single prompt into a short cinematic clip.</p>
+
+            <div class="meta">Stack: Python, OpenAI, Gemini, Grok, Celery, Redis</div>
+
+            <ul>
+                <li>Generated images and video, a narrated script, and synchronized sound.</li>
+                <li>Enabled content creators, storytellers, educators, and filmmakers to prototype scenes and emotions in seconds.</li>
+                <li>Orchestrated four task specific models for visual, narrative, audio, and QA workflows using methods grounded in 70+ of AI research.</li>
+            </ul>
 
 
             <div class="actions">
@@ -187,24 +193,23 @@
   <h3>Vizor – Pharmacy Verification Computer Vision for Robotics</h3>
 
   <!-- Screenshot or cover image goes here -->
-  <img src="assets/img/ Vizor – Pharmacy Verification Computer Vision System.png"
+  <img class="project-media project-media--full"
+       src="assets/img/ Vizor – Pharmacy Verification Computer Vision System.png"
        alt="Vizor Pharmacy Verification System project cover"
        loading="lazy"
-       decoding="async"
-       style="max-width: 100%; border-radius: 12px; margin: 14px 0; box-shadow: 0 6px 24px rgba(0,0,0,0.24);" />
+       decoding="async" />
 
-  <p>
-    Vizor is an enterprise grade computer vision and sensor fusion platform for automated pharmacy verification in robotics and medical technology.
-    The system uses a ConvNeXt Deep learning model together with sensor data to verify medication trays, labels, and doses, achieving accuracy with over 99% accuracy
-    and latency under 100 milliseconds on GPU and Apple MPS.
-    Vizor includes a FastAPI inference service, robust safety logic with fail closed behavior,
-    a reproducible evaluation pipeline, and a design that is ready for production with a complete model card and dataset management.
-  </p>
+  <p><strong>Outcome:</strong> Enterprise grade computer vision and sensor fusion platform for automated pharmacy verification in robotics and medical technology.</p>
 
   <div class="meta">
-    <!-- Optional tech tags -->
-    <!-- <span class="tag">Python</span> <span class="tag">ConvNeXt</span> <span class="tag">Sensor Fusion</span> <span class="tag">FastAPI</span> <span class="tag">PyTorch</span> -->
+    Stack: Python, PyTorch, ConvNeXt, Sensor Fusion, FastAPI
   </div>
+
+  <ul>
+    <li>Used a ConvNeXt deep learning model together with sensor data to verify medication trays, labels, and doses.</li>
+    <li>Achieved over 99% accuracy and latency under 100 milliseconds on GPU and Apple MPS.</li>
+    <li>Included a FastAPI inference service, fail closed safety logic, reproducible evaluation pipeline, model card, and dataset management.</li>
+  </ul>
 
   <div class="actions">
     <a class="btn ghost"
@@ -222,24 +227,23 @@
   <h3>Sophia AI - A Standalone Local LLM for Technical Interview Coaching (100% Offline, No Cloud Calls)</h3>
 
   <!-- Screenshot or cover image goes here -->
-  <img src="assets/img/Sophia-AI-image.png"
+  <img class="project-media project-media--full"
+       src="assets/img/Sophia-AI-image.png"
        alt="Sophia AI project cover"
        loading="lazy"
-       decoding="async"
-       style="max-width: 100%; border-radius: 12px; margin: 14px 0; box-shadow: 0 6px 24px rgba(0,0,0,0.24);" />
+       decoding="async" />
 
-  <p>
-    Sophia AI is a domain specific, fine tuned Large Language Model designed to act as an expert technical interviewer
-    for AI and ML, backend, and MLOps roles. Unlike generic wrappers, Sophia follows a full ownership approach:
-    she is not an API call to OpenAI, she is a standalone 1.5B parameter neural network fine tuned with QLoRA on a
-    proprietary Enterprise Knowledge Lake, with synthetic alignment to reduce common hallucinations. It supports local
-    inference on Apple Silicon or NVIDIA GPUs, ensuring zero external API dependencies.
-  </p>
+  <p><strong>Outcome:</strong> Domain specific, fine tuned Large Language Model for technical interview coaching.</p>
 
   <div class="meta">
-    <!-- Optional tech tags -->
-    <!-- <span class="tag">Python</span> <span class="tag">Qwen2.5 1.5B</span> <span class="tag">QLoRA</span> <span class="tag">Local inference</span> -->
+    Stack: Python, QLoRA, 1.5B LLM, Local Inference, Hugging Face
   </div>
+
+  <ul>
+    <li>Designed to act as an expert technical interviewer for AI and ML, backend, and MLOps roles.</li>
+    <li>Built as a standalone 1.5B parameter neural network fine tuned with QLoRA on a proprietary Enterprise Knowledge Lake.</li>
+    <li>Supports local inference on Apple Silicon or NVIDIA GPUs with zero external API dependencies.</li>
+  </ul>
 
   <div class="actions">
     <a class="btn ghost"
@@ -257,22 +261,23 @@
   <h3>MiahAI – Offline, Full-Stack AI Platform for Private Learning</h3>
 
   <!-- Screenshot/image goes here -->
-  <img src="assets/img/miahai_chatui1.png"
+  <img class="project-media project-media--wide"
+       src="assets/img/miahai_chatui1.png"
        alt="MiahAI Chat Session UI"
-       style="max-width: 96%; border-radius: 12px; margin: 14px 0; box-shadow: 0 6px 24px rgba(0,0,0,0.24);" />
+       loading="lazy"
+       decoding="async" />
 
-  <p>
-    MiahAI isn’t just another chatbot it’s a production ready AI learning application to teach, 
-    not just hand out quick answers or behave like most chatbots do like a calculator. 
-    Instead of giving you the answer instantly, MiahAI provides context grounded in proven 
-    teaching methods shaped by decades of research on how people truly learn and retain knowledge, 
-    so the user can actually learn. 
-    <!-- Optional: If you ship a desktop build, you can add this line -->
-    <!-- Also deployable as a desktop UI (e.g., Avalonia) against the same gRPC backend. -->
-  </p>
+  <p><strong>Outcome:</strong> Production ready AI learning application designed to teach instead of only handing out quick answers.</p>
+
   <div class="meta">
-    <!-- (You can add stack/tech or leave empty) -->
+    Stack: ASP.NET Core MVC, C#, gRPC, Protobuf, Python
   </div>
+
+  <ul>
+    <li>Provides context grounded in proven teaching methods shaped by decades of research on how people learn and retain knowledge.</li>
+    <li>Designed to behave as a learning application, not a basic answer calculator.</li>
+    <li>Built as a private, full-stack AI platform for learning workflows.</li>
+  </ul>
   <div class="actions">
     <a class="btn ghost"
        href="assets/docs/MiahAI_Web_App_Documentation.pdf"
@@ -287,35 +292,34 @@
 <article class="card">
   <h3>Offline Modular Reasoning Engine: Testing Miah LLM</h3>
 
-  <!-- Clickable thumbnail -> opens demo video -->
-  <a href="YOUR_VIDEO_DEMO_LINK" target="_blank" rel="noopener">
-    <img
+  <img class="project-media project-media--full"
       src="assets/img/miahai-modular-re.png"
       alt="Modular Reasoning Engine — gRPC streaming with hot-swappable adapters"
-      class="project-image"
       loading="lazy"
-    />
-  </a>
+      decoding="async" />
 
-  <p>
-    Client agnostic LLM reasoning service with server streaming gRPC,
-    hot swappable model adapters (OpenAI, DeepSeek, Grok, Azure APIs and a local model of AI Miah(LLM)
-    via ONNX Runtime and TensorRT for LLMs), and SQLite session memory.
-    Ships with health and readiness endpoints, structured logging, unit tests, and a Python client.
-  </p>
+  <p><strong>Outcome:</strong> Client agnostic LLM reasoning service with server streaming gRPC.</p>
 
-  <div class="meta"></div>
+  <div class="meta">Stack: gRPC, OpenAI, DeepSeek, Grok, Azure APIs, ONNX Runtime, TensorRT, SQLite</div>
+
+  <ul>
+    <li>Built hot swappable model adapters for OpenAI, DeepSeek, Grok, Azure APIs, and a local AI Miah LLM.</li>
+    <li>Supported local model execution via ONNX Runtime and TensorRT for LLMs with SQLite session memory.</li>
+    <li>Shipped health and readiness endpoints, structured logging, unit tests, and a Python client.</li>
+  </ul>
 
   <div class="actions">
     <a class="btn"
        href="https://www.youtube.com/watch?v=C9x7xbCEkfs"
        target="_blank" rel="noopener">Watch Demo</a>
     <a class="btn ghost"
-       href="assets/docs/miahai-modular-re.pdf"
+       href="assets/docs/MiahAI_Web_App_Documentation.pdf"
        target="_blank" rel="noopener">Project Documentation (PDF)</a>
   </div>
 </article>
 
+</div>
+</section>
 
 <!-- EXPERIENCE (Side-by-Side: Education | Professional) -->
 <section id="experience" class="section" aria-labelledby="experience-title">
@@ -333,7 +337,7 @@
         <li class="xp-item">
           <div class="xp-role">Harvard University — B.L.A., Extension Studies (CS)</div>
           <div class="xp-org">Harvard Extension School</div>
-          <div class="xp-date">Expected 2027</div>
+          <div class="xp-date">Expected 2028</div>
         </li>
 
         <li class="xp-item">
@@ -343,13 +347,13 @@
         </li>
 
         <li class="xp-item">
-          <div class="xp-role">HarvardX — Machine Learning and AI with Python (in progress)</div>
+          <div class="xp-role">HarvardX — Machine Learning and AI with Python Professional Certificate</div>
           <div class="xp-org">HarvardX</div>
           <div class="xp-date">2025</div>
         </li>
 
         <li class="xp-item">
-          <div class="xp-role">HarvardX — Professional Certificate in Computer Science for Artificial Intelligence (Grade A)</div>
+          <div class="xp-role">HarvardX — Computer Science for Artificial Intelligence Professional Certificate</div>
           <div class="xp-org">HarvardX</div>
           <div class="xp-date">2025</div>
         </li>
@@ -357,7 +361,7 @@
         <li class="xp-item">
           <div class="xp-role">TrueCoders — Full-Stack Software Engineering Certificate</div>
           <div class="xp-org">TrueCoders</div>
-          <div class="xp-date">2025</div>
+          <div class="xp-date">2024–2025</div>
         </li>
 
         <li class="xp-item">
@@ -374,42 +378,36 @@
   <ul class="xp-timeline">
 
     <li class="xp-item">
-      <div class="xp-role">Machine Learning Engineer — AI Art Studio (1st Place)</div>
-      <div class="xp-org">Harvard SEAS LLM Hackathon, project collected by Meta</div>
-      <div class="xp-date">Oct 2025</div>
-      <p class="xp-note">
-        Led a team of four to build AI Art Studio, a prompt to cinematic video pipeline that turns a single input
-        into visuals, a narrated script, and synchronized audio with support for re editing. Trained and integrated
-        a “cinematic director” quality assurance model in Python using scikit learn, TensorFlow, and PyTorch to
-        orchestrate multiple models and enforce consistency, and shipped a live demo in a three hour build window.
-      </p>
+      <div class="xp-role">Founding AI Architect & Consultant (Contract)</div>
+      <div class="xp-org">Tradora / AutoReel</div>
+      <div class="xp-date">Dec 2025–Mar 2026</div>
+      <ul class="xp-note">
+        <li>Built an AI walkaround video generator that ingests vehicle photos and outputs dealer-ready narrated clips.</li>
+        <li>Developed AI models, ML workflows, inference stack, C#/.NET APIs, data flows, and dealer platform integrations.</li>
+        <li>Reduced manual production time, cost, and external vendor dependency. Link: <a href="https://tradora.ai" target="_blank" rel="noopener">Tradora.AI</a></li>
+      </ul>
     </li>
 
     <li class="xp-item">
-      <div class="xp-role">AI and Machine Learning Engineer</div>
-      <div class="xp-org">Bright Minds Private AI</div>
-      <div class="xp-date">2024–Present</div>
-      <p class="xp-note">
-        Design and build standalone large language models and private AI systems that run fully offline and on premises.
-        Own the full path from data preparation and fine tuning through evaluation and deployment, including modular
-        reasoning engines and high performance inference services built with C sharp, Python, gRPC, and relational databases.
-        Use Microsoft Azure and Amazon Web Services for experimentation, data workflows, and cloud baselines while keeping
-        the primary systems designed to operate without external dependencies. Focus on clean architecture, observability,
-        and deployment patterns that are ready for enterprise environments.
-      </p>
+      <div class="xp-role">Senior ML & Backend Engineer (Contract)</div>
+      <div class="xp-org">BD — Vizor Robotic Pharmacy</div>
+      <div class="xp-date">Sept 2025–Jan 2026</div>
+      <ul class="xp-note">
+        <li>Architected and deployed an industrial-grade computer vision system using a ConvNeXt backbone for robotic pharmacy dispensing verification.</li>
+        <li>Trained and optimized the model to 96.7% accuracy on specialized NLM pill image datasets.</li>
+        <li>Shipped a production FastAPI inference API with under 100ms latency for real-time robotic processing. Links: <a href="https://github.com/jordansegoviagonzalez/vizor-pharmacy-vision" target="_blank" rel="noopener">GitHub</a> | <a href="https://huggingface.co/jordansegovia/vizor-pharmacy-vision" target="_blank" rel="noopener">Hugging Face</a></li>
+      </ul>
     </li>
 
     <li class="xp-item">
-      <div class="xp-role">Software Engineer | Applied AI</div>
-      <div class="xp-org">TrueCoders — Full Stack Software Engineering</div>
-      <div class="xp-date">Sept 2024–Nov 2025</div>
-      <p class="xp-note">
-        Built MiahAI, an offline private learning assistant: an ASP.NET Core MVC chat application with persistent
-        session memory, CRUD workflows, and a streaming style interface. Implemented layered architecture across
-        web, core, and infrastructure projects with dependency injection, validation, and exception handling,
-        backed by Entity Framework Core and MySQL migrations. Integrated a typed gRPC and Protobuf boundary to a
-        local modular reasoning engine for low latency model calls and stable contracts.
-      </p>
+      <div class="xp-role">Software Engineer</div>
+      <div class="xp-org">AffiliateBegins | Freelance</div>
+      <div class="xp-date">2021–2024</div>
+      <ul class="xp-note">
+        <li>Architected and deployed a public marketing site and membership platform for a creator business.</li>
+        <li>Used React, Node.js, PostgreSQL, Stripe, and REST APIs to power gated access, enrollment, and subscriptions.</li>
+        <li>Built content delivery and affiliate workflows. Links: <a href="https://affiliatebegins.com" target="_blank" rel="noopener">AffiliateBegins.com</a> | <a href="https://members.ilearnhowitworks.com" target="_blank" rel="noopener">Membership Platform</a></li>
+      </ul>
     </li>
 
   </ul>
@@ -423,16 +421,16 @@
       <h2>Contact</h2>
       <p class="muted">Open to AI/ML & Software Engineer roles.</p>
       <p>
-        <a href="mailto:youremail@example.com">segoviajordan91@gmail.com</a> ·
+        <a href="mailto:segoviajordan91@gmail.com">segoviajordan91@gmail.com</a> ·
         <a href="https://www.linkedin.com/in/jordansegovia" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://github.com/jordansegoviagonzalez" target="_blank" rel="noopener">GitHub</a> ·
         
       </p>
     </section>
   </main>
 
   <footer class="footer">
-    <div>© <span id="year"></span> Jordan Segovia AI/ML Engineer </div>
+    <div>© 2021 Jordan Segovia · AI/ML Engineer</div>
     <a href="#about" class="top">Back to top</a>
   </footer>
 

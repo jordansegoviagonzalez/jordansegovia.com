@@ -6,6 +6,7 @@
   --radius:18px;
 }
 
+/* ===== Base ===== */
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;color:var(--ink);font-family:Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
 a{color:var(--ink);text-decoration:none}
@@ -13,14 +14,13 @@ a:hover{opacity:.9}
 img{max-width:100%;height:auto;display:block}
 html{scroll-behavior:smooth}
 
-/* ===== Background video always visible ===== */
+/* ===== Background ===== */
 .bg-video{
   position:fixed;inset:0;width:100%;height:100%;object-fit:cover;
   filter:brightness(.65) contrast(1.05) saturate(1.08);
   z-index:-1;pointer-events:none;background:#000;
 }
 
-/* Optional depth shapes (kept behind panes) */
 .spheres{position:fixed;inset:0;pointer-events:none;z-index:0}
 .spheres::before,.spheres::after{
   content:"";position:absolute;border-radius:50%;filter:blur(40px);opacity:.45;
@@ -44,20 +44,45 @@ html{scroll-behavior:smooth}
 /* remove glossy corner dot */
 .glass::after{ content:none; }
 
-/* ===== Nav (glass) ===== */
+/* ===== Navigation ===== */
 .nav{
-  position:fixed;top:12px;left:12px;right:12px;height:60px;z-index:10;
+  position:fixed;top:0;left:0;right:0;height:64px;z-index:10;
   display:flex;align-items:center;justify-content:space-between;
-  padding:0 16px;
+  padding:0 24px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:0 0 var(--radius) var(--radius);
+  background:rgba(16,18,24,.32);
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:0 12px 36px rgba(0,0,0,.28);
 }
 .nav .brand{font-weight:800;letter-spacing:.2px}
-.nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
-.nav a{color:var(--muted)}
+.nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.nav a{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:38px;padding:0 12px;border-radius:999px;
+  color:var(--muted);transition:background .18s ease,color .18s ease,transform .18s ease;
+}
+.nav a:hover{
+  color:var(--ink);background:rgba(255,255,255,.08);transform:translateY(-1px);
+}
+.nav-toggle{
+  display:none;width:42px;height:42px;align-items:center;justify-content:center;
+  flex-direction:column;gap:5px;border:1px solid rgba(255,255,255,.16);
+  border-radius:12px;background:rgba(255,255,255,.06);color:var(--ink);
+}
+.nav-toggle span{
+  width:18px;height:2px;border-radius:2px;background:currentColor;
+  transition:transform .18s ease,opacity .18s ease;
+}
+.nav.is-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.is-open .nav-toggle span:nth-child(2){opacity:0}
+.nav.is-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-/* ===== Main glass container ===== */
+/* ===== Layout ===== */
 main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
 
-/* Sections are also glass inside the main (stacked panes for depth) */
+/* ===== Sections ===== */
 .section{
   margin:16px 0;padding:22px;border-radius:calc(var(--radius) - 4px);
   border:1px solid rgba(255,255,255,.14);
@@ -68,7 +93,7 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
 }
 .section h1,.section h2{margin:0 0 10px}
 
-/* ===== About layout ===== */
+/* ===== About ===== */
 .about{display:grid;grid-template-columns:1.4fr .9fr;gap:18px;align-items:start}
 .about .lead{line-height:1.65}
 .awards{margin:10px 0 0 18px;color:var(--muted)}
@@ -79,7 +104,7 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   box-shadow:0 12px 40px rgba(0,0,0,.45);
 }
 
-/* ===== Buttons (generic) ===== */
+/* ===== Buttons ===== */
 .cta-row,.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 .btn{
   display:inline-block;padding:10px 12px;border-radius:10px;
@@ -90,19 +115,28 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
 .btn.ghost{background:transparent}
 .btn:hover{border-color:#7dd3fc;color:#7dd3fc}
 
-/* ===== Cards ===== */
+/* ===== Project Cards ===== */
 .grid{display:grid;grid-template-columns:1fr;gap:14px}
 @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
 .card{
-  padding:16px;border-radius:12px;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(16,18,24,calc(var(--pane-alpha) + 0.02));
+  display:flex;flex-direction:column;
+  padding:18px;border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(16,18,24,calc(var(--pane-alpha) - 0.01));
   backdrop-filter:blur(calc(var(--blur) - 8px)) saturate(125%);
   -webkit-backdrop-filter:blur(calc(var(--blur) - 8px)) saturate(125%);
 }
-.meta{color:var(--muted);font-size:14px;margin-top:8px}
+.card h3{margin-top:0;line-height:1.35}
+.card p{line-height:1.58;margin:8px 0 10px}
+.card ul{margin:8px 0 0 18px;padding:0;color:var(--ink);line-height:1.55}
+.card li{margin:5px 0}
+.card img{
+  width:100%;height:auto;object-fit:cover;
+}
+.card .actions{margin-top:auto;padding-top:12px}
+.meta{color:var(--muted);font-size:14px;margin-top:8px;line-height:1.45}
 
-/* ===== Certificates tiles ===== */
+/* ===== Certificates ===== */
 .certs{display:grid;grid-template-columns:1fr;gap:12px}
 @media(min-width:800px){.certs{grid-template-columns:1fr 1fr}}
 .cert{
@@ -119,11 +153,26 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
 .footer{max-width:1120px;margin:0 auto 28px auto;display:flex;justify-content:space-between;padding:0 8px;color:var(--muted)}
 .top{color:var(--muted)} .top:hover{color:#7dd3fc}
 
-/* ===== Mobile tweaks ===== */
+/* ===== Responsive: Global/Nav ===== */
 @media(max-width:820px){
   .about{grid-template-columns:1fr}
   .about-photo img{width:220px}
-  .nav{top:8px;left:8px;right:8px;height:56px}
+  .nav{top:0;left:0;right:0;height:60px;padding:0 14px}
+  .nav .brand{font-size:15px}
+  .nav-toggle{display:flex}
+  .nav ul{
+    position:absolute;top:60px;left:8px;right:8px;
+    display:grid;grid-template-columns:1fr;gap:6px;
+    padding:10px;border:1px solid rgba(255,255,255,.14);
+    border-radius:14px;background:rgba(16,18,24,.84);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    box-shadow:0 16px 42px rgba(0,0,0,.38);
+    opacity:0;visibility:hidden;transform:translateY(-8px);
+    transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
+  }
+  .nav.is-open ul{opacity:1;visibility:visible;transform:translateY(0)}
+  .nav a{justify-content:flex-start;width:100%;padding:0 12px}
   main.glass{margin:90px auto 32px auto}
 }
 
@@ -132,18 +181,14 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   .bg-video{filter:brightness(.8) contrast(1)}
 }
 
-/* =========================================================
-   ADDITIONS: HERO, PILLS, PROJECT MEDIA, TIMELINE
-   =======================================================*/
-
-/* HERO */
+/* ===== Hero ===== */
 .hero{padding-top:10px}
 .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:center}
 .hero-title{font-size:42px;font-weight:800;margin:0 0 8px 0}
 .hero-sub{font-size:18px;line-height:1.6;margin:0 0 16px 0}
 .hero-actions{display:flex;flex-wrap:wrap;gap:10px 12px;row-gap:12px}
 
-/* Pills (social/contact) */
+/* ===== Social Pills ===== */
 .pill{
   display:inline-flex;align-items:center;gap:8px;
   padding:10px 14px;border:1px solid rgba(255,255,255,.12);
@@ -153,32 +198,29 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
 }
 .pill:hover{border-color:#7dd3fc;color:#7dd3fc}
 
-/* Extra spacing to separate Contact from the rest */
-.hero-actions .pill--contact {
-  margin: right 40px;   /* tweak to taste: 24–40px */
-}
-
-/* Hero portrait — **square** (requested) */
+/* ===== Hero Portrait ===== */
 .hero .about-photo img{
   width:220px;height:220px;object-fit:cover;border-radius:12px;
   border:1px solid rgba(255,255,255,.12);
   box-shadow:0 14px 40px rgba(0,0,0,.45);
 }
 
-/* Project image helper */
-.project-image{
-  max-width:96%;border-radius:12px;margin:14px 0;
+/* ===== Project Media ===== */
+.project-media{
+  border-radius:12px;margin:14px 0;
   box-shadow:0 6px 24px rgba(0,0,0,.24);
 }
+.project-media--full{max-width:100%}
+.project-media--wide{max-width:96%}
 
-/* Small screens for hero */
+/* ===== Responsive: Hero ===== */
 @media(max-width:820px){
   .hero-grid{grid-template-columns:1fr;text-align:left}
   .hero .about-photo{order:-1}
   .hero-title{font-size:34px}
 }
 
-/* === Experience: Split Timeline (Education | Professional) — FIXED === */
+/* ===== Experience Timeline ===== */
 #experience .xp-split{
   position:relative;
   display:grid;
@@ -188,10 +230,8 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   margin-top:18px;
 }
 
-/* theme accent for dots (no purple) */
 #experience{ --accent: var(--ink); }
 
-/* Center axis — top→bottom (no page split) */
 #experience .xp-axis{
   position:absolute;
   top:0; bottom:0; left:50%;
@@ -202,12 +242,10 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   z-index:1;
 }
 
-/* Column headings */
 #experience .xp-col-title{
   margin:0 0 12px 0; font-weight:800; letter-spacing:.1px; font-size:1.12rem;
 }
 
-/* Lists */
 #experience .xp-timeline{ list-style:none; margin:0; padding:0; }
 #experience .xp-item{
   position:relative;
@@ -216,7 +254,6 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   border-bottom:1px solid rgba(255,255,255,.10);
 }
 
-/* Text styles */
 #experience .xp-role{ font-size:18px; line-height:1.35; margin:0 0 2px 0; color:var(--ink); }
 #experience .xp-org, #experience .xp-date{ color:var(--muted); font-size:14px; }
 #experience .xp-note{ margin:6px 0 0 0; color:var(--ink); font-size:14px; line-height:1.55; }
@@ -225,7 +262,6 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   border-radius:999px; margin-left:.35rem; opacity:.9;
 }
 
-/* Dots near the center axis (use --accent, not purple) */
 #experience .xp-edu .xp-item::after,
 #experience .xp-pro .xp-item::before{
   content:""; position:absolute; top:2px; z-index:2;
@@ -234,11 +270,10 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   box-shadow:0 0 0 4px color-mix(in oklab, var(--accent) 25%, transparent);
 }
 
-/* Position dots toward center (tweak offset to your column gap) */
 #experience .xp-edu .xp-item::after{ right:-30px; }
 #experience .xp-pro  .xp-item::before{ left:-30px; }
 
-/* Responsive stack */
+/* ===== Responsive: Experience ===== */
 @media (max-width: 980px){
   #experience .xp-split{ grid-template-columns:1fr; gap:18px; }
   #experience .xp-axis{ display:none; }
@@ -248,5 +283,3 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   }
   #experience .xp-item{ padding-left:6px; }
 }
-
-
