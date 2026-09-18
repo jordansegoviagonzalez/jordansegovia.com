@@ -196,6 +196,11 @@ main.glass{max-width:1200px;margin:96px auto 40px auto;padding:16px}
   text-decoration:none;color:var(--ink);
   backdrop-filter:blur(10px);
 }
+.pill--contact{
+  min-width:190px;
+  justify-content:center;
+  padding:12px 22px;
+}
 .pill:hover{border-color:#7dd3fc;color:#7dd3fc}
 
 /* ===== Hero Portrait ===== */

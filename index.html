@@ -144,6 +144,37 @@
     <h2>Projects</h2>
 
     <div class="grid">
+        <!-- AI Medical Scheduling Agent -->
+        <article class="card">
+          <h3>AI Medical Scheduling Agent — Multi Organization Voice &amp; Chat Scheduling Platform (Deployed on AWS)</h3>
+
+          <img class="project-media project-media--full"
+               src="assets/img/ai-agent-platform-portfolio.gif"
+               alt="Voice AI medical scheduling platform showing calls, patient routing, and appointment status"
+               loading="lazy"
+               decoding="async" />
+
+          <p><strong>Outcome:</strong> Enterprise production voice AI and chat multi organization scheduling platform that turns natural patient conversations into validated physician routing and real appointment bookings.</p>
+
+          <div class="meta">
+            Stack: Python, Flask, PostgreSQL, React, TypeScript, OpenAI, Vogent, LangSmith, Docker, Nginx, AWS
+          </div>
+
+          <ul>
+            <li>Built natural-language patient intake that converts conversational speech into structured medical categories, identity data, and scheduling inputs.</li>
+            <li>Engineered deterministic physician routing, appointment matching, confirmation, and transactional booking with safeguards against malformed data and double booking.</li>
+            <li>Used LangSmith tracing and benchmarking to evaluate AI behavior, then containerized and deployed the full platform to AWS with Docker and Nginx.</li>
+          </ul>
+
+          <p class="muted">Private repository and documentation.</p>
+
+          <div class="actions">
+            <a class="btn"
+               href="https://youtu.be/B_Yiz7AVbF0?si=B62aOrGAykCB5QNE"
+               target="_blank" rel="noopener noreferrer">Watch Full Application Walkthrough</a>
+          </div>
+        </article>
+
         <!-- AI ART STUDIO (Hackathon Winner) -->
         <article class="card project-card">
             <h3>
@@ -201,7 +232,7 @@
 
   <ul>
     <li>Used a ConvNeXt deep learning model together with sensor data to verify medication trays, labels, and doses.</li>
-    <li>Achieved over 99% accuracy and latency under 100 milliseconds on GPU and Apple MPS.</li>
+    <li>Achieved 96.7% accuracy on the held-out test set, with inference latency under 100 milliseconds on NVIDIA GPUs and Apple MPS.</li>
     <li>Included a FastAPI inference service, fail closed safety logic, reproducible evaluation pipeline, model card, and dataset management.</li>
   </ul>
 
